@@ -1,0 +1,118 @@
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import RoomsPage from './pages/RoomsPage';
+import OwnerDashboard from './pages/OwnerDashboard';
+import supabase from './supabase';
+
+// Sample room data initialization
+const sampleRooms = [
+  {
+    id: '1',
+    title: 'Spacious 2BHK in Koramangala',
+    location: 'Koramangala, Bangalore',
+    city: 'Bangalore',
+    rent: 25000,
+    propertyType: '2 BHK',
+    tenantPreference: 'Family',
+    amenities: 'AC, WiFi, Parking',
+    description: 'Beautiful 2BHK apartment with modern amenities',
+    contactNumber: '9876543210',
+    ownerName: 'Rajesh Kumar',
+    images: ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500'],
+    ownerId: 'owner1'
+  },
+  {
+    id: '2',
+    title: 'Cozy 1BHK near Metro',
+    location: 'Indiranagar, Bangalore',
+    city: 'Bangalore',
+    rent: 18000,
+    propertyType: '1 BHK',
+    tenantPreference: 'Bachelor',
+    amenities: 'WiFi, Gym',
+    description: 'Perfect for working professionals',
+    contactNumber: '9876543211',
+    ownerName: 'Priya Sharma',
+    images: ['https://images.unsplash.com/photo-1502672260066-6bc35f0a1077?w=500'],
+    ownerId: 'owner2'
+  },
+  {
+    id: '3',
+    title: 'Girls PG with Food',
+    location: 'HSR Layout, Bangalore',
+    city: 'Bangalore',
+    rent: 12000,
+    propertyType: '1 Bed',
+    tenantPreference: 'Girls',
+    amenities: 'Food, WiFi, AC',
+    description: 'Safe and secure PG for working women',
+    contactNumber: '9876543212',
+    ownerName: 'Lakshmi Devi',
+    images: ['https://images.unsplash.com/photo-1540518614846-7eded433c457?w=500'],
+    ownerId: 'owner3'
+  }
+];
+
+// Initialize sample data
+if (!localStorage.getItem('rooms')) {
+  localStorage.setItem('rooms', JSON.stringify(sampleRooms));
+}
+
+function App() {
+  const [user, setUser] = useState(null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+
+  useEffect(() => {
+    checkUser();
+  }, []);
+
+  const checkUser = async () => {
+    const { data } = await supabase.auth.getUser();
+    setUser(data.user);
+  };
+
+  const handleLogin = () => {
+    setIsLogin(true);
+    setShowAuthModal(true);
+  };
+
+  const handleRegister = () => {
+    setIsLogin(false);
+    setShowAuthModal(true);
+  };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+  };
+
+  const handleLoginRequired = () => {
+    setShowAuthModal(true);
+    setIsLogin(true);
+  };
+
+  if (user?.role === 'owner') {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <Navbar user={user} onLogout={handleLogout} />
+        <OwnerDashboard user={user} />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar
+        onLoginClick={handleLogin}
+        onRegisterClick={handleRegister}
+        user={user}
+        onLogout={handleLogout}
+      />
+      
+      <RoomsPage user={user} onLoginRequired={handleLoginRequired} />
+    </div>
+  );
+}
+
+export default App;
