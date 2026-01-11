@@ -250,7 +250,8 @@ useEffect(() => {
 - Click to view full details
 - Hover effect for visual feedback
 
-**Screenshot Required**: `06-room-cards-grid.png`
+<img width="1349" height="639" alt="image" src="https://github.com/user-attachments/assets/208f3700-2db4-44d3-aaa2-ba1e388ab269" />
+
 
 ---
 
@@ -280,7 +281,8 @@ useEffect(() => {
 5. **Description**: Full property description
 6. **Owner Contact**: Name and phone number in highlighted section
 
-**Screenshot Required**: `07-room-modal-full.png`
+<img width="1346" height="621" alt="image" src="https://github.com/user-attachments/assets/48c0e6f7-e9cb-416c-9521-f9883bb2d4ac" />
+
 
 ---
 
@@ -330,7 +332,8 @@ useEffect(() => {
 /^[a-zA-Z\s]{2,50}$/.test(name)
 ```
 
-**Screenshot Required**: `08-register-modal.png`, `09-login-modal.png`
+<img width="1350" height="638" alt="image" src="https://github.com/user-attachments/assets/944d27f4-657d-4044-9c23-74445e383368" />
+
 
 ---
 
@@ -382,7 +385,8 @@ useEffect(() => {
 - Price: Low to High
 - Price: High to Low
 
-**Screenshot Required**: `10-filter-section.png`
+<img width="1101" height="242" alt="image" src="https://github.com/user-attachments/assets/eda51762-8c52-4540-8b3a-bd339bf52c7b" />
+
 
 ---
 
@@ -434,7 +438,10 @@ useEffect(() => {
 }
 ```
 
-**Screenshot Required**: `11-add-room-modal-empty.png`, `12-add-room-modal-filled.png`
+<img width="1107" height="508" alt="image" src="https://github.com/user-attachments/assets/bc4b5a18-27ce-46ef-85b4-e6c6e91b131d" />
+
+<img width="1110" height="521" alt="image" src="https://github.com/user-attachments/assets/7fd24e5a-0bfd-42f0-84a6-415188577ec5" />
+
 
 ---
 
@@ -474,7 +481,8 @@ handleDelete(roomId) {
 }
 ```
 
-**Screenshot Required**: `13-owner-dashboard-empty.png`, `14-owner-dashboard-with-rooms.png`
+<img width="1120" height="524" alt="image" src="https://github.com/user-attachments/assets/07208989-4b4d-461b-912c-9f0796b71074" />
+
 
 ---
 
@@ -506,7 +514,8 @@ handleDelete(roomId) {
 }
 ```
 
-**Screenshot Required**: `15-contact-modal.png`
+<img width="1352" height="630" alt="image" src="https://github.com/user-attachments/assets/4ead4f5e-5644-4f90-8b46-fbad6637d110" />
+
 
 ---
 
@@ -535,7 +544,8 @@ Landing → Search/Browse → View Details → Contact Owner
     Add/Manage Listings
 ```
 
-**Screenshot Required**: `16-homepage-full.png`
+<img width="1351" height="643" alt="image" src="https://github.com/user-attachments/assets/f8497724-76e4-4e7d-a2b7-8ffdb23ea942" />
+
 
 ---
 
@@ -570,7 +580,7 @@ loadRooms() {
 }
 ```
 
-**Screenshot Required**: `17-rooms-page-full.png`
+<img width="1110" height="526" alt="image" src="https://github.com/user-attachments/assets/ae5281d8-d3e6-42d1-bd7d-3c19bf096936" />
 
 ---
 
@@ -592,7 +602,7 @@ loadRooms() {
 - Redirects non-owners to home page
 - Validates authentication status
 
-**Screenshot Required**: `18-dashboard-page.png`
+<img width="1366" height="621" alt="image" src="https://github.com/user-attachments/assets/9fe262e5-8a44-4561-89a6-43f39f08e5fb" />
 
 ---
 
@@ -764,250 +774,6 @@ saveToStorage('rooms', filtered);
 
 ---
 
-## Screenshots Reference
-
-### Required Screenshots
-
-| # | Filename | Description | Component/Page |
-|---|----------|-------------|----------------|
-| 1 | `01-navbar-logged-out.png` | Navigation bar for unauthenticated users | Navbar |
-| 2 | `02-navbar-logged-in.png` | Navigation bar showing user info and logout | Navbar |
-| 3 | `03-hero-slider.png` | Homepage carousel with overlay text | HeroSlider |
-| 4 | `04-search-box-filled.png` | Search form with all fields populated | SearchBox |
-| 5 | `05-search-validation-errors.png` | Search form showing validation errors | SearchBox |
-| 6 | `06-room-cards-grid.png` | Grid layout of multiple room cards | RoomCard |
-| 7 | `07-room-modal-full.png` | Detailed room view in modal | RoomModal |
-| 8 | `08-register-modal.png` | Registration form with all fields | AuthModal |
-| 9 | `09-login-modal.png` | Login form | AuthModal |
-| 10 | `10-filter-section.png` | Filter controls expanded | FilterSection |
-| 11 | `11-add-room-modal-empty.png` | Empty add room form | AddRoomModal |
-| 12 | `12-add-room-modal-filled.png` | Completed add room form with validation | AddRoomModal |
-| 13 | `13-owner-dashboard-empty.png` | Dashboard with no listings | OwnerDashboard |
-| 14 | `14-owner-dashboard-with-rooms.png` | Dashboard showing multiple listings | OwnerDashboard |
-| 15 | `15-contact-modal.png` | Contact information display | ContactUsModal |
-| 16 | `16-homepage-full.png` | Complete homepage view | HomePage |
-| 17 | `17-rooms-page-full.png` | Full rooms listing page | RoomsPage |
-| 18 | `18-dashboard-page.png` | Owner dashboard page wrapper | OwnerDashboardPage |
-| 19 | `19-mobile-responsive.png` | Mobile view of homepage | Responsive Design |
-| 20 | `20-navigation-breadcrumb.png` | Top navigation breadcrumb | Navigation |
-
-### Screenshot Guidelines
-
-**Resolution**: Minimum 1920x1080 for desktop views, actual device resolution for mobile
-
-**Format**: PNG with transparency where applicable
-
-**Content**: 
-- Use realistic sample data
-- Show all relevant UI elements
-- Capture complete component states
-- Include both success and error states
-
-**Organization**: 
-```
-screenshots/
-├── components/
-│   ├── navbar/
-│   ├── modals/
-│   └── cards/
-├── pages/
-│   ├── home/
-│   ├── rooms/
-│   └── dashboard/
-└── responsive/
-    └── mobile/
-```
-
----
-
-## Development Workflow
-
-### Adding New Features
-
-1. **Component Creation**
-   ```bash
-   # Create new component file
-   touch src/components/NewComponent.jsx
-   ```
-
-2. **Component Structure**
-   ```javascript
-   import React, { useState } from 'react';
-   
-   const NewComponent = ({ prop1, prop2 }) => {
-     const [state, setState] = useState(initialValue);
-     
-     return (
-       <div className="component-container">
-         {/* Component JSX */}
-       </div>
-     );
-   };
-   
-   export default NewComponent;
-   ```
-
-3. **Testing**
-   - Test component in isolation
-   - Test with various prop combinations
-   - Test responsive behavior
-   - Test error states
-
-4. **Integration**
-   - Import into parent component
-   - Connect to data flow
-   - Test in production build
-
-### Code Style Guidelines
-
-**Component Naming**: PascalCase
-```javascript
-// Correct
-const UserProfile = () => { ... }
-
-// Incorrect
-const userProfile = () => { ... }
-```
-
-**Variable Naming**: camelCase
-```javascript
-// Correct
-const userName = "John";
-const isLoggedIn = true;
-
-// Incorrect
-const UserName = "John";
-const is_logged_in = true;
-```
-
-**Function Naming**: camelCase with descriptive verbs
-```javascript
-// Correct
-const handleSubmit = () => { ... }
-const fetchUserData = () => { ... }
-
-// Incorrect
-const submit = () => { ... }
-const userData = () => { ... }
-```
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-**Issue**: White blank screen on startup
-**Solution**: 
-- Check browser console for errors
-- Verify all components are properly imported
-- Ensure `main.jsx` is correctly configured
-- Check for CSP (Content Security Policy) errors
-
-**Issue**: LocalStorage data not persisting
-**Solution**:
-- Verify browser allows LocalStorage
-- Check for incognito/private browsing mode
-- Clear browser cache and try again
-
-**Issue**: Images not displaying
-**Solution**:
-- Verify image URLs are valid
-- Check network tab for 404 errors
-- Ensure CORS is properly configured for external images
-
-**Issue**: Form validation not working
-**Solution**:
-- Check validation patterns in `utils/validation.js`
-- Verify error state is properly set
-- Ensure form submission is prevented on errors
-
----
-
-## Performance Optimization
-
-### Current Optimizations
-
-1. **Code Splitting**: Vite handles automatic code splitting
-2. **Image Optimization**: Uses Unsplash CDN for optimized delivery
-3. **Lazy Loading**: Components loaded on demand
-4. **Memoization**: React hooks prevent unnecessary re-renders
-
-### Future Optimizations
-
-- Implement virtual scrolling for large lists
-- Add image lazy loading
-- Implement service workers for offline support
-- Add CDN for static assets
-- Optimize bundle size with tree shaking
-
----
-
-## Deployment
-
-### Build Process
-
-```bash
-# Install dependencies
-npm install
-
-# Run production build
-npm run build
-
-# Output directory: dist/
-```
-
-### Deployment Options
-
-**Option 1: Netlify**
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Deploy
-netlify deploy --prod
-```
-
-**Option 2: Vercel**
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel --prod
-```
-
-**Option 3: GitHub Pages**
-```bash
-# Add to package.json
-"homepage": "https://yourusername.github.io/room-finder"
-
-# Install gh-pages
-npm install --save-dev gh-pages
-
-# Add deploy script
-"predeploy": "npm run build"
-"deploy": "gh-pages -d dist"
-
-# Deploy
-npm run deploy
-```
-
-### Environment Variables
-
-Create `.env` file in root:
-```env
-VITE_APP_NAME=RoomFinder
-VITE_API_URL=http://localhost:3000
-```
-
-Access in code:
-```javascript
-const appName = import.meta.env.VITE_APP_NAME;
-```
-
----
-
 ## Future Enhancements
 
 ### Phase 1: Backend Integration
@@ -1052,93 +818,3 @@ const appName = import.meta.env.VITE_APP_NAME;
 - Offline mode
 - Location-based search
 - Camera integration for image upload
-
----
-
-## API Documentation (Future)
-
-### Authentication Endpoints
-
-**POST /api/auth/register**
-```javascript
-Request:
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "phone": "9876543210",
-  "password": "securepass123",
-  "role": "user"
-}
-
-Response:
-{
-  "success": true,
-  "user": { ... },
-  "token": "jwt_token_here"
-}
-```
-
-**POST /api/auth/login**
-```javascript
-Request:
-{
-  "email": "john@example.com",
-  "password": "securepass123"
-}
-
-Response:
-{
-  "success": true,
-  "user": { ... },
-  "token": "jwt_token_here"
-}
-```
-
-### Room Management Endpoints
-
-**GET /api/rooms**
-```javascript
-Query Parameters:
-- city: string
-- minRent: number
-- maxRent: number
-- propertyType: string
-- tenantPreference: string
-- sortBy: string
-
-Response:
-{
-  "success": true,
-  "rooms": [ ... ],
-  "total": 42
-}
-```
-
-**POST /api/rooms**
-```javascript
-Headers:
-Authorization: Bearer {token}
-
-Request:
-{
-  "title": "Spacious 2BHK",
-  "location": "Koramangala",
-  "city": "Bangalore",
-  "rent": 25000,
-  ...
-}
-
-Response:
-{
-  "success": true,
-  "room": { ... }
-}
-
-
-
-
-**Search & Browse**:
-- [ ] Search requires all fields to be filled
-- [ ] Search validates date ranges
-- [ ] Filters apply correctly
-- [ ] Sorting works as expected
